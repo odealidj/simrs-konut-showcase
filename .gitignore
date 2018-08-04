@@ -1,0 +1,17 @@
+## Build and Output directories
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+## Visual Studio Cache and User Settings
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Temporary and Backup Files
+*.bak
+*.tmp
+*.log

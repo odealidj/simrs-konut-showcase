@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B26AE35-8207-4ABF-8A52-A2D889C3E541}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIMRS.Model</RootNamespace>
+    <AssemblyName>SIMRS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="agama.cs" />
+    <Compile Include="alamatpasien.cs" />
+    <Compile Include="anamnesapasien.cs" />
+    <Compile Include="aptbarang.cs" />
+    <Compile Include="aptbarangmasuk.cs" />
+    <Compile Include="aptbarangmasukdetail.cs" />
+    <Compile Include="aptbarangsatuan.cs" />
+    <Compile Include="aptbarangsatuantrigger.cs" />
+    <Compile Include="aptbrggu.cs" />
+    <Compile Include="aptbrggudetail.cs" />
+    <Compile Include="aptdef1brg.cs" />
+    <Compile Include="aptdepo.cs" />
+    <Compile Include="aptdistribusi.cs" />
+    <Compile Include="aptdistribusidetail.cs" />
+    <Compile Include="aptpbf.cs" />
+    <Compile Include="aptsatuan.cs" />
+    <Compile Include="aptstockop.cs" />
+    <Compile Include="aptstockopdetaild.cs" />
+    <Compile Include="aptstockopgudang.cs" />
+    <Compile Include="aptstockopgudangdetail.cs" />
+    <Compile Include="carapulang.cs" />
+    <Compile Include="customobject\rekammedis\copengunjung.cs" />
+    <Compile Include="dokter.cs" />
+    <Compile Include="dokterruangrawat.cs" />
+    <Compile Include="goldarah.cs" />
+    <Compile Include="hubkeluarga.cs" />
+    <Compile Include="icdixpasiencs.cs" />
+    <Compile Include="icdxkategori.cs" />
+    <Compile Include="icdxpasien.cs" />
+    <Compile Include="icdxpasienstskasus.cs" />
+    <Compile Include="icdxpuskesmas.cs" />
+    <Compile Include="icdxsubkategori.cs" />
+    <Compile Include="identitasdiri.cs" />
+    <Compile Include="identitasdiripasien.cs" />
+    <Compile Include="identitaspasien.cs" />
+    <Compile Include="identitaspasienbpjs.cs" />
+    <Compile Include="instalasipelayanan.cs" />
+    <Compile Include="jenisdiagnosa.cs" />
+    <Compile Include="jenistarif.cs" />
+    <Compile Include="jk.cs" />
+    <Compile Include="kamar.cs" />
+    <Compile Include="kec.cs" />
+    <Compile Include="kelas.cs" />
+    <Compile Include="kelasbpjs.cs" />
+    <Compile Include="kelasruangrawat.cs" />
+    <Compile Include="keldesa.cs" />
+    <Compile Include="klpkpasien.cs" />
+    <Compile Include="klsruangrawat.cs" />
+    <Compile Include="kotakab.cs" />
+    <Compile Include="loginapp.cs" />
+    <Compile Include="loginappdetail.cs" />
+    <Compile Include="loginmodulapp.cs" />
+    <Compile Include="modulapp.cs" />
+    <Compile Include="negara.cs" />
+    <Compile Include="pekerjaan.cs" />
+    <Compile Include="pelayananmedik.cs" />
+    <Compile Include="pelayananpasien.cs" />
+    <Compile Include="pelayananpasienpelunasan.cs" />
+    <Compile Include="pemeriksaanfisik.cs" />
+    <Compile Include="pendidikan.cs" />
+    <Compile Include="pengobatan.cs" />
+    <Compile Include="pengobatanaturanpakai.cs" />
+    <Compile Include="pengobatannama.cs" />
+    <Compile Include="pengobatansatuan.cs" />
+    <Compile Include="pengobatanukuran.cs" />
+    <Compile Include="penjaminpasien.cs" />
+    <Compile Include="penjaminpasienbpjs.cs" />
+    <Compile Include="penjaminpasiendirisendiri.cs" />
+    <Compile Include="penjaminpasienkeluarga.cs" />
+    <Compile Include="perawat.cs" />
+    <Compile Include="perawatgroup.cs" />
+    <Compile Include="perujuk.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="propinsi.cs" />
+    <Compile Include="puskesmas.cs" />
+    <Compile Include="registrasi.cs" />
+    <Compile Include="registrasipenunjang.cs" />
+    <Compile Include="registrasiruangrawat.cs" />
+    <Compile Include="registrasirujukanpuskesmas.cs" />
+    <Compile Include="roleapp.cs" />
+    <Compile Include="rt.cs" />
+    <Compile Include="ruangrawat.cs" />
+    <Compile Include="ruangrawatrujukan.cs" />
+    <Compile Include="rw.cs" />
+    <Compile Include="sapaan.cs" />
+    <Compile Include="strukpelayanan.cs" />
+    <Compile Include="aptstsbgrmasukdetail.cs" />
+    <Compile Include="stsmasukkeluar.cs" />
+    <Compile Include="stspasienbaru.cs" />
+    <Compile Include="stspernikahan.cs" />
+    <Compile Include="stsregistrasi.cs" />
+    <Compile Include="suku.cs" />
+    <Compile Include="suratrujukanpuskesmas.cs" />
+    <Compile Include="tarif.cs" />
+    <Compile Include="tempattidur.cs" />
+    <Compile Include="view\anamnesapasien.cs" />
+    <Compile Include="view\vicdxpuskesmas.cs" />
+    <Compile Include="view\vicdxsubkategori.cs" />
+    <Compile Include="view\vicdxsubkategorieng.cs" />
+    <Compile Include="view\vicdxsubkategorindo.cs" />
+    <Compile Include="view\vrtrw.cs" />
+    <Compile Include="view\vruangrawat_kelasruangrawatid_kamarid_tempattidurid.cs" />
+    <Compile Include="view\v_aptbarang.cs" />
+    <Compile Include="view\v_aptbarangmasukdetail_aptbrggudetail.cs" />
+    <Compile Include="view\v_aptbarangmasuk_pbf_aptbrggu.cs" />
+    <Compile Include="view\v_aptbarangmasuk_pbf_notin_aptbrggudetail.cs" />
+    <Compile Include="view\v_aptbarangsatuan.cs" />
+    <Compile Include="view\v_aptbarangsatuan_pbf.cs" />
+    <Compile Include="view\v_aptbrggudetail.cs" />
+    <Compile Include="view\v_aptbrggudetail_notin_stock.cs" />
+    <Compile Include="view\v_aptdistribusi.cs" />
+    <Compile Include="view\v_aptdistribusidetail.cs" />
+    <Compile Include="view\v_aptgenerateharga.cs" />
+    <Compile Include="view\v_aptgudangdetail.cs" />
+    <Compile Include="view\v_aptpembelian.cs" />
+    <Compile Include="view\v_aptpembeliandetail.cs" />
+    <Compile Include="view\v_aptpembelian_notin__aptbrggudetail.cs" />
+    <Compile Include="view\v_aptstockkontrol.cs" />
+    <Compile Include="view\v_aptstockopgudang.cs" />
+    <Compile Include="view\v_aptstockopgudangdetail.cs" />
+    <Compile Include="view\v_distinctcaripasienpenunjang_not_in_registrasipenunjang.cs" />
+    <Compile Include="view\v_distinctpasienpenunjang.cs" />
+    <Compile Include="view\v_icdxpasienpoli.cs" />
+    <Compile Include="view\v_identitaspasien_for_listidentitaspasien.cs" />
+    <Compile Include="view\v_identitaspasien_for_listregistrasi.cs" />
+    <Compile Include="view\v_identitaspasien_jk_alamatpasien.cs" />
+    <Compile Include="view\v_jenistarifpenjamin.cs" />
+    <Compile Include="view\v_jmltempattidurbasekelasrawatinap.cs" />
+    <Compile Include="view\v_listkamarrawatinap.cs" />
+    <Compile Include="view\v_listtempattidurrawatinap.cs" />
+    <Compile Include="view\v_login_ruangrawat.cs" />
+    <Compile Include="view\v_pelayananpasien.cs" />
+    <Compile Include="view\v_pelayananpasienkarcis.cs" />
+    <Compile Include="view\v_pelayananpasien_all.cs" />
+    <Compile Include="view\v_pelayananpasien_distinct_from_not_alamat.cs" />
+    <Compile Include="view\v_pelayananpasien_not_alamat.cs" />
+    <Compile Include="view\v_pelayananpasien_rincian_not_alamat.cs" />
+    <Compile Include="view\v_pelayananpasien_ruangperawatan_from_not_alamat.cs" />
+    <Compile Include="view\v_pelunasan.cs" />
+    <Compile Include="view\v_pemeriksaanfisik.cs" />
+    <Compile Include="view\v_pengobatan.cs" />
+    <Compile Include="view\v_perawat.cs" />
+    <Compile Include="view\v_registrasi.cs" />
+    <Compile Include="view\v_registrasiruangrawat.cs" />
+    <Compile Include="view\v_registrasiruangrawatrjrd.cs" />
+    <Compile Include="view\v_registrasiruangrawat_notin_registrasipenunjang.cs" />
+    <Compile Include="view\v_registrasiruangrawat_penunjang.cs" />
+    <Compile Include="view\v_registrasi_identitaspasien_nocm_nama.cs" />
+    <Compile Include="view\v_registrasi_rekammedis_from_v_registrasiruangrawat.cs" />
+    <Compile Include="view\v_registrasi_transaksi.cs" />
+    <Compile Include="view\v_RL_51_Pengunjung.cs" />
+    <Compile Include="view\v_RL_54.cs" />
+    <Compile Include="view\v_ruangrawatcaripasienpenunjang_not_in_registrasipenunjang.cs" />
+    <Compile Include="view\v_ruangrawatpasienpenunjang.cs" />
+    <Compile Include="view\v_statuspenyakit.cs" />
+    <Compile Include="view\v_tarif.cs" />
+    <Compile Include="view\v_tarif_withaout_jenistarif_penjaminid.cs" />
+    <Compile Include="view\v_tindakanpenunjang.cs" />
+    <Compile Include="view\v_tindakanpoli.cs" />
+    <Compile Include="view\v_viewregpasienlama.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptbarang.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_apttemppembelian.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_pelayananpasien_rincian_not_alamat.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
