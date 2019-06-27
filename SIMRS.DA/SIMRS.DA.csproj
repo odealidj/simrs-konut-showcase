@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1EA5DF15-F668-45A1-BD70-4A5205FD9A7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIMRS.DA</RootNamespace>
+    <AssemblyName>SIMRS.DA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.30\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgamaRepository.cs" />
+    <Compile Include="AptstockopdetaildRepository.cs" />
+    <Compile Include="AptstockopRepository.cs" />
+    <Compile Include="AptstsbgrmasukdetailRepository.cs" />
+    <Compile Include="Expand\AlamatpasienRepository.cs" />
+    <Compile Include="AnamnesapasienRepository.cs" />
+    <Compile Include="AptbarangmasukdetailRepository.cs" />
+    <Compile Include="AptbarangmasukRepository.cs" />
+    <Compile Include="AptbarangRepository.cs" />
+    <Compile Include="AptbarangsatuanRepository.cs" />
+    <Compile Include="AptbarangsatuantriggerRepository.cs" />
+    <Compile Include="AptbrggudetailRepository.cs" />
+    <Compile Include="AptbrgguRepository.cs" />
+    <Compile Include="Aptdef1brgRepository.cs" />
+    <Compile Include="AptdepoRepository.cs" />
+    <Compile Include="AptdistribusidetailRepository.cs" />
+    <Compile Include="AptdistribusiRepository.cs" />
+    <Compile Include="AptpbfRepository.cs" />
+    <Compile Include="AptsatuanRepository.cs" />
+    <Compile Include="AptstockopgudangRepository.cs" />
+    <Compile Include="CarapulangRepository.cs" />
+    <Compile Include="DapperContext.cs" />
+    <Compile Include="DokterRepository.cs" />
+    <Compile Include="Expand\KartuBPJSRepository.cs" />
+    <Compile Include="Expand\KeluargaPasienRepository.cs" />
+    <Compile Include="Expand\ListRegistrasiRepository.cs" />
+    <Compile Include="Expand\PenjamindirisendiriRepository.cs" />
+    <Compile Include="Expand\RegistrasipasienbaruRepository.cs" />
+    <Compile Include="Expand\RegistrasiPasienLamaRepository.cs" />
+    <Compile Include="Expand\RekamMedis\PengunjungRepository.cs" />
+    <Compile Include="Expand\RLRepository.cs" />
+    <Compile Include="Expand\SuratRujukanBPJSRepository.cs" />
+    <Compile Include="HubkeluargaRepository.cs" />
+    <Compile Include="AptstockopgudangdetailRepository.cs" />
+    <Compile Include="IcdixpasienRepository.cs" />
+    <Compile Include="IcdxkategoriRepository.cs" />
+    <Compile Include="IcdxpasienRepository.cs" />
+    <Compile Include="IcdxpuskesmasRepository.cs" />
+    <Compile Include="IcdxsubkategoriRepository.cs" />
+    <Compile Include="IdentitasdiripasienRepository.cs" />
+    <Compile Include="IdentitasdiriRepository.cs" />
+    <Compile Include="IdentitaspasienbpjsRepository.cs" />
+    <Compile Include="IdentitaspasienRepository.cs" />
+    <Compile Include="EnuminstalasiPelayanan.cs" />
+    <Compile Include="InstalasipelayananRepository.cs" />
+    <Compile Include="IRepository\IAgamaRepository.cs" />
+    <Compile Include="IRepository\IAlamatpasienRepository.cs" />
+    <Compile Include="IRepository\IAnamnesapasienRepository.cs" />
+    <Compile Include="IRepository\IAptbarangmasukdetailRepository.cs" />
+    <Compile Include="IRepository\IAptbarangmasukRepository.cs" />
+    <Compile Include="IRepository\IAptbarangRepository.cs" />
+    <Compile Include="IRepository\IAptbarangsatuanRepository.cs" />
+    <Compile Include="IRepository\IAptbarangsatuantriggerRepository.cs" />
+    <Compile Include="IRepository\IAptbrggudetailRepository.cs" />
+    <Compile Include="IRepository\IAptbrgguRepository.cs" />
+    <Compile Include="IRepository\IAptdef1brgRepository.cs" />
+    <Compile Include="IRepository\IAptdepoRepository.cs" />
+    <Compile Include="IRepository\IAptdistribusidetailRepository.cs" />
+    <Compile Include="IRepository\IAptdistribusiRepository.cs" />
+    <Compile Include="IRepository\IAptpbfRepository.cs" />
+    <Compile Include="IRepository\IAptsatuanRepository.cs" />
+    <Compile Include="IRepository\IAptstockopdetaildRepository.cs" />
+    <Compile Include="IRepository\IAptstockopgudangdetailRepository.cs" />
+    <Compile Include="IRepository\IAptstockopgudangRepository.cs" />
+    <Compile Include="IRepository\IAptstockopRepository.cs" />
+    <Compile Include="IRepository\IAptstsbgrmasukdetailRepository.cs" />
+    <Compile Include="IRepository\IBaseRepository.cs" />
+    <Compile Include="IRepository\ICarapulangRepository.cs" />
+    <Compile Include="IRepository\IDapperContext.cs" />
+    <Compile Include="IRepository\IDokterRepository.cs" />
+    <Compile Include="IRepository\IExpand\IKartuBPJSRepository.cs" />
+    <Compile Include="IRepository\IExpand\IKeluargaPasienRepository.cs" />
+    <Compile Include="IRepository\IExpand\IListRegistrasiRepository.cs" />
+    <Compile Include="IRepository\IExpand\RekamMedis\IPengunjungRepository.cs" />
+    <Compile Include="IRepository\IExpand\IPenjamindirisendiriRepository.cs" />
+    <Compile Include="IRepository\IExpand\IRegistrasipasienbaruRepository.cs" />
+    <Compile Include="IRepository\IExpand\IRegistrasiPasienLamaRepository.cs" />
+    <Compile Include="IRepository\IExpand\IRLRepository.cs" />
+    <Compile Include="IRepository\IExpand\ISuratRujukanBPJSRepository.cs" />
+    <Compile Include="IRepository\IHubkeluargaRepository.cs" />
+    <Compile Include="IRepository\IIcdixpasienRepository.cs" />
+    <Compile Include="IRepository\IIcdxkategoriRepository.cs" />
+    <Compile Include="IRepository\IIcdxpasienRepository.cs" />
+    <Compile Include="IRepository\IIcdxpuskesmasRepository.cs" />
+    <Compile Include="IRepository\IIcdxsubkategoriRepository.cs" />
+    <Compile Include="IRepository\IIdentitasdiripasienRepository.cs" />
+    <Compile Include="IRepository\IIdentitasdiriRepository.cs" />
+    <Compile Include="IRepository\IIdentitaspasienbpjsRepository.cs" />
+    <Compile Include="IRepository\IIdentitaspasienRepository.cs" />
+    <Compile Include="IRepository\IInstalasipelayananRepository.cs" />
+    <Compile Include="IRepository\IJenisdiagnosaRepository.cs" />
+    <Compile Include="IRepository\IJenistarifRepository.cs" />
+    <Compile Include="IRepository\IJkRepository.cs" />
+    <Compile Include="IRepository\IKecRepository.cs" />
+    <Compile Include="IRepository\IKelasRepository.cs" />
+    <Compile Include="IRepository\IKeldesaRepository.cs" />
+    <Compile Include="IRepository\IKotakabRepository.cs" />
+    <Compile Include="IRepository\ILoginappdetailRepository.cs" />
+    <Compile Include="IRepository\ILoginappRepository.cs" />
+    <Compile Include="IRepository\ILoginmodulappRepository.cs" />
+    <Compile Include="IRepository\IPelayananmedikRepository.cs" />
+    <Compile Include="IRepository\IPelayananpasienpelunasanRepository.cs" />
+    <Compile Include="IRepository\IPelayananpasienRepository.cs" />
+    <Compile Include="IRepository\IPemeriksaanfisikRepository.cs" />
+    <Compile Include="IRepository\IPengobatanRepository.cs" />
+    <Compile Include="IRepository\IPenjaminpasienbpjsRepository.cs" />
+    <Compile Include="IRepository\IPenjaminpasiendirisendiriRepository.cs" />
+    <Compile Include="IRepository\IPenjaminpasienkeluargaRepository.cs" />
+    <Compile Include="IRepository\IPenjaminRepository.cs" />
+    <Compile Include="IRepository\IPerawatRepository.cs" />
+    <Compile Include="IRepository\IPerujukRepository.cs" />
+    <Compile Include="IRepository\IPropinsiRepository.cs" />
+    <Compile Include="IRepository\IPuskesmasRepository.cs" />
+    <Compile Include="IRepository\IRegistrasipenunjangRepository.cs" />
+    <Compile Include="IRepository\IRegistrasiRepository.cs" />
+    <Compile Include="IRepository\IRegistrasiruangrawatRepository.cs" />
+    <Compile Include="IRepository\IRtRepository.cs" />
+    <Compile Include="IRepository\IRuangrawatRepository.cs" />
+    <Compile Include="IRepository\IRuangrawatrujukanRepository.cs" />
+    <Compile Include="IRepository\IRwRepository.cs" />
+    <Compile Include="IRepository\IStspasienbaruRepository.cs" />
+    <Compile Include="IRepository\IStrukpelayananRepository.cs" />
+    <Compile Include="IRepository\ISuratrujukanpuskesmasRepository.cs" />
+    <Compile Include="IRepository\ITarifRepository.cs" />
+    <Compile Include="IRepository\ITempattidurRepository.cs" />
+    <Compile Include="IRepository\IUnitOfWork.cs" />
+    <Compile Include="JenisdiagnosaRepository.cs" />
+    <Compile Include="JenistarifRepository.cs" />
+    <Compile Include="JkRepository.cs" />
+    <Compile Include="KecRepository.cs" />
+    <Compile Include="KelasRepository.cs" />
+    <Compile Include="KeldesaRepository.cs" />
+    <Compile Include="KotakabRepository.cs" />
+    <Compile Include="LoginappdetailRepository.cs" />
+    <Compile Include="LoginappRepository.cs" />
+    <Compile Include="LoginmodulappRepository.cs" />
+    <Compile Include="PelayananmedikRepository.cs" />
+    <Compile Include="PelayananpasienpelunasanRepository.cs" />
+    <Compile Include="PelayananpasienRepository.cs" />
+    <Compile Include="PemeriksaanfisikRepository.cs" />
+    <Compile Include="PengobatanRepository.cs" />
+    <Compile Include="PenjaminpasienbpjsRepository.cs" />
+    <Compile Include="PenjaminpasiendirisendiriRepository.cs" />
+    <Compile Include="PenjaminpasienkeluargaRepository.cs" />
+    <Compile Include="PenjaminRepository.cs" />
+    <Compile Include="PerawatRepository.cs" />
+    <Compile Include="PerujukRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropinsiRepository.cs" />
+    <Compile Include="PuskesmasRepository.cs" />
+    <Compile Include="RegistrasipenunjangRepository.cs" />
+    <Compile Include="RegistrasiRepository.cs" />
+    <Compile Include="RegistrasiruangrawatRepository.cs" />
+    <Compile Include="RtRepository.cs" />
+    <Compile Include="RuangrawatRepository.cs" />
+    <Compile Include="RuangrawatrujukanRepository.cs" />
+    <Compile Include="RwRepository.cs" />
+    <Compile Include="StrukpelayananRepository.cs" />
+    <Compile Include="SuratrujukanpuskesmasRepository.cs" />
+    <Compile Include="TarifRepository.cs" />
+    <Compile Include="TempattidurRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIMRS.Model\SIMRS.Model.csproj">
+      <Project>{7b26ae35-8207-4abf-8a52-a2d889c3e541}</Project>
+      <Name>SIMRS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,84 @@
+﻿using SIMRS.DESKTOP.FrontEnd.LAB;
+using SIMRS.DESKTOP.Helper;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SIMRS.DESKTOP.FrontEnd.Gizi
+{
+    public class FLoginGizi : FLoginLAB
+    {
+        public FLoginGizi() :base()
+        {
+            Modul.modulkode = "md008.1"; Modul.modulname = "Modul Gizi";
+
+            this.Text = "Login Modul Gizi";
+            this.modulappKode = Modul.modulkode;
+            this.modulappNm = Modul.modulname;
+
+            this.mtxtUsername.Text = "gz01";
+            this.mtxtPassword.Text = "gz01";
+        }
+
+        protected override void mbtnLogin_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (mtxtUsername.Text == null)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Username tidak boleh kosong", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxtUsername.Focus();
+                    return;
+                }
+
+                if (mtxtPassword.Text == null)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Password tidak boleh kosong", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxtPassword.Focus();
+                    return;
+                }
+
+                LoadDataLogindetailAndModulApp(mtxtUsername.Text, mtxtPassword.Text, this.modulappKode);
+
+                if (this.loginappDetail == null)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Login tidak valid", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxtUsername.Focus();
+                    return;
+                }
+
+                if (this.loginModulapp == null)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Modul tidak valid", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxtUsername.Focus();
+                    return;
+                }
+
+                if (this.loginappDetail.loginappdetailid != this.loginModulapp.loginappid)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Login tidak valid", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxtUsername.Focus();
+                    return;
+                }
+
+                LoadPelayananmedikByModulappkode(this.loginModulapp.modulappkode);
+
+                this.Hide();
+                FMainMenuGizi fmenu = new FMainMenuGizi();
+                fmenu.ShowDialog();
+                this.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, ex.Message + "\n Login()", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+    }
+}

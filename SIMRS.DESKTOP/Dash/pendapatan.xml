@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-ID">
+  <Title Text="Pendapatan By Pelayanan Medik" />
+  <DataSources>
+    <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
+      <Connection Name="cn" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="sp_bi_pendapatan">
+        <Parameter Name="startDate" Type="DevExpress.DataAccess.Expression">(System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?yearParam + '/01/01')</Parameter>
+        <Parameter Name="endDate" Type="DevExpress.DataAccess.Expression">(System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?yearParam + '/12/31')</Parameter>
+        <Tables>
+          <Table Name="v_bi_pendapatan" X="30" Y="30" Width="125" Height="193" />
+        </Tables>
+        <Columns>
+          <Column Table="v_bi_pendapatan" Name="nocm" />
+          <Column Table="v_bi_pendapatan" Name="ruangrawatid" />
+          <Column Table="v_bi_pendapatan" Name="ruangrawatnm" />
+          <Column Table="v_bi_pendapatan" Name="pelayananmedikid" />
+          <Column Table="v_bi_pendapatan" Name="pelayananmediknm" />
+          <Column Table="v_bi_pendapatan" Name="strukpelayanantgl" />
+          <Column Table="v_bi_pendapatan" Name="grandtotalbiaya" />
+        </Columns>
+        <Sorting>
+          <Column Table="v_bi_pendapatan" Name="pelayananmedikid" />
+          <Column Table="v_bi_pendapatan" Name="strukpelayanantgl" />
+        </Sorting>
+        <Filter>[v_bi_pendapatan.strukpelayanantgl] Between(?startDate, ?endDate)</Filter>
+        <GroupFilter></GroupFilter>
+      </Query>
+      <Query Type="SelectQuery" Name="v_bi_pendapatan">
+        <Tables>
+          <Table Name="v_bi_pendapatan" X="30" Y="30" Width="125" Height="204" />
+        </Tables>
+        <Columns>
+          <Expression Alias="Tahun">GETYEAR([v_bi_pendapatan.strukpelayanantgl])</Expression>
+        </Columns>
+        <Grouping>
+          <Expression>GETYEAR([v_bi_pendapatan.strukpelayanantgl])</Expression>
+        </Grouping>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="sp_bi_pendapatan">
+            <Field Name="nocm" Type="String" />
+            <Field Name="ruangrawatid" Type="Int16" />
+            <Field Name="ruangrawatnm" Type="String" />
+            <Field Name="pelayananmedikid" Type="Int16" />
+            <Field Name="pelayananmediknm" Type="String" />
+            <Field Name="strukpelayanantgl" Type="DateTime" />
+            <Field Name="grandtotalbiaya" Type="Decimal" />
+          </View>
+          <View Name="v_bi_pendapatan">
+            <Field Name="Tahun" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="yearParam" Value="2018" Description="Input tahun:">
+      <DynamicListLookUpSettings DataSourceName="dashboardSqlDataSource1" DataMember="v_bi_pendapatan" ValueMember="Tahun" DisplayMember="Tahun" />
+    </Parameter>
+  </Parameters>
+  <Items>
+    <Pivot ComponentName="pivotDashboardItem1" Name="Tabel Pendapatan" ParentContainer="dashboardItemGroup1" DataSource="dashboardSqlDataSource1" DataMember="sp_bi_pendapatan">
+      <DataItems>
+        <Measure DataMember="grandtotalbiaya" ShowGrandTotals="false" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="strukpelayanantgl" DefaultId="DataItem3">
+          <DateTimeFormat MonthFormat="Abbreviated" />
+        </Dimension>
+        <Dimension DataMember="strukpelayanantgl" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
+        <Dimension DataMember="pelayananmedikid" DefaultId="DataItem2" />
+        <Dimension DataMember="pelayananmediknm" DefaultId="DataItem4" />
+      </DataItems>
+      <Columns>
+        <Column DefaultId="DataItem3" />
+        <Column DefaultId="DataItem1" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem2" />
+        <Row DefaultId="DataItem4" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+      <AutoExpandColumnGroups>true</AutoExpandColumnGroups>
+      <AutoExpandRowGroups>true</AutoExpandRowGroups>
+      <ShowColumnGrandTotals>false</ShowColumnGrandTotals>
+      <ShowRowGrandTotals>false</ShowRowGrandTotals>
+      <ShowRowTotals>false</ShowRowTotals>
+      <LayoutType>Tabular</LayoutType>
+    </Pivot>
+    <Chart ComponentName="chartDashboardItem1" Name="Grafik Pendapatan" DataSource="dashboardSqlDataSource1" DataMember="sp_bi_pendapatan">
+      <DataItems>
+        <Dimension DataMember="strukpelayanantgl" DateTimeGroupInterval="Month" DefaultId="DataItem2" />
+        <Dimension DataMember="pelayananmediknm" DefaultId="DataItem3" />
+        <Measure DataMember="grandtotalbiaya" Name="Total" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem3" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions OverlappingMode="Reposition" Position="Inside" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="" ShowCaption="false" ParentContainer="dashboardItemGroup1" DataSource="dashboardSqlDataSource1" DataMember="sp_bi_pendapatan" FilterType="Exact">
+      <DataItems>
+        <Dimension DataMember="strukpelayanantgl" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+      <DateTimePeriods>
+        <DateTimePeriod Name="this year">
+          <StartLimit>
+            <FlowDateTimePeriodLimit />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Offset="1" />
+          </EndLimit>
+        </DateTimePeriod>
+      </DateTimePeriods>
+    </DateFilter>
+  </Items>
+  <Groups>
+    <Group ComponentName="dashboardItemGroup1" Name="Tabel Pendapatan By Pelayanan Medik" ShowCaption="false">
+      <InteractivityOptions IsMasterFilter="true" />
+    </Group>
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutGroup Orientation="Vertical" DashboardItem="dashboardItemGroup1" Weight="57.142857142857146">
+        <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="38.723404255319146" />
+        <LayoutItem DashboardItem="pivotDashboardItem1" Weight="61.276595744680854" />
+      </LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="42.857142857142854" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

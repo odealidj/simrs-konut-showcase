@@ -1,0 +1,1759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AAC8066-56A2-4D64-B5B4-E02F96DED5A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SIMRS.DESKTOP</RootNamespace>
+    <AssemblyName>SIMRS.DESKTOP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E26896DC08D14FD5F4DCAF5BB717842DF4AB9D6A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SIMRS.DESKTOP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>far3_32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v19.1.Win, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Presets, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Win, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrontEnd\Farmasi\Depo\FAddDepo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Depo\FEditDepo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FDialogLogoutFarmasi.cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FObatSatuan\FAddObatSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FObatSatuan\FEditObatSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FObatSatuan\FListObatSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FAddBarangKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FAddBarangMasukGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FAddBarangGudang2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FAddHargajual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FAddStockOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FEDetailPembelianNotInGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FEditHargajual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FEditStockOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FEditTarifGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FListBarangKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FListBarangMasukGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FListBarangMasukGudang2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FListPembelianNotInGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Gudang\FListStockOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Obat\FAddObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Obat\FEditObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pbf\FAddPbf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pbf\FEditPbf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pembelian\FAddPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pembelian\FAEDetailPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FDetailBarangMasuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FDetailGudangBarangMasuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FHomeFarmasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Obat\FListBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FListBarangMasuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pembelian\FEDetailPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pembelian\FEditPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pembelian\FListBarangMasuk2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Depo\FListDepo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FListGudangBarangMasuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FListGudangBarangMasuk2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pbf\FListPBF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Pembelian\FListPembelianDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Satuan\FAddSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Satuan\FEditSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\Satuan\FListSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FLoginFarmasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Farmasi\FLoginFarmasi2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FDialogExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FAddEditTarifGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FHomeGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FKonfirmasiRegistrasiPenunjangGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FListCariPasienGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FListRegistrasiGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FListTarifGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FLoginGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FMainMenuGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FTarifGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Gizi\FTindakanPasienGizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\FAddEditRegistrasiPasienBaruRD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\FAddEditRegistrasiPasienLamaRD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\FLapBukuRegisterRD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\FHomeIGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\FListIdentitasPasienRD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\FListRegistrasiRD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\FLoginRegistrasiIGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\FMainMenuRegistrasiRD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\PelayananIGD\FAddEditTarifIGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\PelayananIGD\FListPasienUGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\PelayananIGD\FListTarifIGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\PelayananIGD\FLoginPelayananIGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\PelayananIGD\FMainMenuPelayananIGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\IGD\PelayananIGD\ListRegistrasiUGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FHomeKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FListPelunasan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FListRegistrasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FLoginKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FMainMenuKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FRincianTindakanKasirBL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FRincianTindakanKasirL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FTransaksiKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FTransaksiKasir.Designer.cs">
+      <DependentUpon>FTransaksiKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Kasir\FListTransaksiPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FAddEditTarifLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FHomeLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FKonfirmasiRegistrasiPenunjangLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FListCariPasienLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FListRegistrasiLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FListTarifLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FLoginLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FMainMenuLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FTarifLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FTarifLAB2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LAB\FTindakanPasienLAB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Operasi\FHomeOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Operasi\FKonfirmasiRegistrasiPenunjangOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Operasi\FListCariPasienOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Operasi\FListRegistrasiOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Operasi\FLoginOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Operasi\FMainMenuOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Operasi\FTarifOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Operasi\FTindakanPasienOperasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FAddEditTarifPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FAnamnesaPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FHomePoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListDiagnosaPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListDokterPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListICDXPOLI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListLihatDiagnosaPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListLihatTindakanPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListPerawatPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListRiwayatPenyakitPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListTarifPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListTindakanPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FLoginPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FMainMenuPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FListPelayananPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FPelayananPasienRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FPengobatanPasienPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FPeriksaFisikPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FTarifPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FTarifPoli2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FViewPenjamin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\FViewPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\POLI\ListRegistrasiPoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FAddEditTarifRad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FHomeRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FKonfirmasiRegistrasiPenunjangRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FListCariPasienRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FListRegistrasiRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FListTarifRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FLoginRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FMainMenuRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FTarifRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RAD\FTindakanPasienRAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FAddEditTarifRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FAnamnesaPasienKeluarRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FAnamnesaPasienRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FCaraPulangRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FHomeRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListDiagnosaPasienKeluarRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListDiagnosaPasienRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListPasienRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListRegistrasiKeluarRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListRegistrasiRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListRiwayatPenyakitPasienKeluarRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListRiwayatPenyakitPasienRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListTarifRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListTindakanPasienKeluarRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FListTindakanPasienRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FLoginRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FMainMenuRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FPengobatanPasienKeluarRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FPengobatanPasienRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FPeriksaFisikKeluarRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FPeriksaFisikRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RawatInap\FTarifRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FHomeRegistrasiRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FKonfirmasiRegistrasiRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FLapBukuRegisterRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FListAsalRegistrasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FlistBedRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FListIdentitasPasienRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FListRegistrasiRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FLoginRegistrasiRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRI\FMainMenuRegistrasiRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FAddEditRegistrasiPasienBaruRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FAddEditRegistrasiPasienLamaRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FBukuRegisterRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FDialogLogoutRegistrasiRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FEditIdentitasPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FEditRegistrasiPasienRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FHomeRegistrasiRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FLapBukuRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FListICDXRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FListIdentitasPasienRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FListRegistrasiRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FListRiwayatPenyakitPasienRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FLoginRegistrasiRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FMainMenuRegistrasiRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RegistrasiRJ\FUpdateNoRMRJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\Report\FLapBukuRegisterRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\Report\FRptBukuRegisterRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FHomeRekamMedis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FListDetailPasienRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FListDetailPasienRM.Designer.cs">
+      <DependentUpon>FListDetailPasienRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FListDetailTransaksiPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FListDetailTransaksiPasien.Designer.cs">
+      <DependentUpon>FListDetailTransaksiPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FListIcdxByRegistrasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FListPasienRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FListRegistrasiByPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FlistRegistrasiPasienRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FListRiwayatPenyakitPasienRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FloginRekamMedis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\FMainMenuRekamMedis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\Report\FRptPenngunjungRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\RekamMedis\Report\FRptTopTenPenyakitRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\SIE\FDialogLogoutSIE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\SIE\FLoginSIE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\Carapulang.cs" />
+    <Compile Include="Helper\CommonFunc.cs" />
+    <Compile Include="Helper\CommonFuncControl.cs" />
+    <Compile Include="Helper\CustomColor.cs" />
+    <Compile Include="Helper\CustomMessageBox.cs" />
+    <Compile Include="Helper\Kelas.cs" />
+    <Compile Include="Helper\Kotakab.cs" />
+    <Compile Include="Helper\LoginApp.cs" />
+    <Compile Include="Helper\LoginAppDetail.cs" />
+    <Compile Include="Helper\Modul.cs" />
+    <Compile Include="Helper\Negara.cs" />
+    <Compile Include="Helper\Pelayananmedik.cs" />
+    <Compile Include="Helper\Propinsi.cs" />
+    <Compile Include="Helper\Prosedurmasuk.cs" />
+    <Compile Include="Helper\Ruangrawat.cs" />
+    <Compile Include="Helper\SettingDefaultLookUpEdit.cs" />
+    <Compile Include="Helper\Stsmasukkeluar.cs" />
+    <Compile Include="Helper\Stspasienbaru.cs" />
+    <Compile Include="Helper\Stsregistrasi.cs" />
+    <Compile Include="MyComponents\MyGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponents\MyGridControl.Designer.cs">
+      <DependentUpon>MyGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\MyGridHandler.cs" />
+    <Compile Include="MyComponents\MyGridRegistration.cs" />
+    <Compile Include="MyComponents\MyGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponents\MyGridView.Designer.cs">
+      <DependentUpon>MyGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\MyGridViewInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template\frm\FAddTarifPasien2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FAddTarifPasien2.Designer.cs">
+      <DependentUpon>FAddTarifPasien2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FAnamnesaPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FAnamnesaPasien.Designer.cs">
+      <DependentUpon>FAnamnesaPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Depo\FAddEditDepo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Depo\FAddEditDepo.Designer.cs">
+      <DependentUpon>FAddEditDepo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\FAddEditHargajual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\FAddEditHargajual.Designer.cs">
+      <DependentUpon>FAddEditHargajual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFAddEditBarangGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFAddEditBarangGudang.Designer.cs">
+      <DependentUpon>TFAddEditBarangGudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFAddEditBarangKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFAddEditBarangKeluar.Designer.cs">
+      <DependentUpon>TFAddEditBarangKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFAddEditStockOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFAddEditStockOP.Designer.cs">
+      <DependentUpon>TFAddEditStockOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFListBarangGudang2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFListBarangGudang2.Designer.cs">
+      <DependentUpon>TFListBarangGudang2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFAddBarangMasukGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFAddBarangMasukGudang.Designer.cs">
+      <DependentUpon>TFAddBarangMasukGudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFEditTarifGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFEditTarifGudang.Designer.cs">
+      <DependentUpon>TFEditTarifGudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFListBarangKeluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFListBarangKeluar.Designer.cs">
+      <DependentUpon>TFListBarangKeluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFLIstStockOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\TFLIstStockOP.Designer.cs">
+      <DependentUpon>TFLIstStockOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Pembelian\TFAddEditPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Pembelian\TFAddEditPembelian.Designer.cs">
+      <DependentUpon>TFAddEditPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\FDetailPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\FDetailPembelian.Designer.cs">
+      <DependentUpon>FDetailPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\FFilterPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\FFilterPembelian.Designer.cs">
+      <DependentUpon>FFilterPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\FAddBarangGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\FAddBarangGudang.Designer.cs">
+      <DependentUpon>FAddBarangGudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\FListBarangGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Gudang\FListBarangGudang.Designer.cs">
+      <DependentUpon>FListBarangGudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\FListPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\FListPembelian.Designer.cs">
+      <DependentUpon>FListPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Pembelian\TFListPembelian2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Pembelian\TFListPembelian2.Designer.cs">
+      <DependentUpon>TFListPembelian2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\ObatSatuan\TFAddEditObatSatuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\ObatSatuan\TFAddEditObatSatuan.Designer.cs">
+      <DependentUpon>TFAddEditObatSatuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Obat\TFAddEditObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Obat\TFAddEditObat.Designer.cs">
+      <DependentUpon>TFAddEditObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Pembelian\TFListPembelianDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\Pembelian\TFListPembelianDetail.Designer.cs">
+      <DependentUpon>TFListPembelianDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\TFPendapatanByPelayananMedik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\TFPendapatanByPelayananMedik.Designer.cs">
+      <DependentUpon>TFPendapatanByPelayananMedik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\TFPendapatanByRuangPelayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\TFPendapatanByRuangPelayanan.Designer.cs">
+      <DependentUpon>TFPendapatanByRuangPelayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\SIE\TFDashboardSIE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\SIE\TFDashboardSIE.Designer.cs">
+      <DependentUpon>TFDashboardSIE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFListOneFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFListOneFilter.Designer.cs">
+      <DependentUpon>TFListOneFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Farmasi\TFMainMenuFarmasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FCaraPulang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FCaraPulang.Designer.cs">
+      <DependentUpon>FCaraPulang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FKonfirmasiRegistrasiPenunjang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FKonfirmasiRegistrasiPenunjang.Designer.cs">
+      <DependentUpon>FKonfirmasiRegistrasiPenunjang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FPelayananPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FPelayananPasien.Designer.cs">
+      <DependentUpon>FPelayananPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FRptBukuRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FRptBukuRegister.Designer.cs">
+      <DependentUpon>FRptBukuRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListRiwayatPenyakitPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListRiwayatPenyakitPasien.Designer.cs">
+      <DependentUpon>FListRiwayatPenyakitPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListSeven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListSeven.Designer.cs">
+      <DependentUpon>FListSeven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FDiagnosaPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FDiagnosaPasien.Designer.cs">
+      <DependentUpon>FDiagnosaPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListSix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListSix.Designer.cs">
+      <DependentUpon>FListSix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFAddEditRegistrasiPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFAddEditRegistrasiPasien.Designer.cs">
+      <DependentUpon>TFAddEditRegistrasiPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFHome.Designer.cs">
+      <DependentUpon>TFHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FKonfirmasiRegistrasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FKonfirmasiRegistrasi.Designer.cs">
+      <DependentUpon>FKonfirmasiRegistrasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListBed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListBed.Designer.cs">
+      <DependentUpon>FListBed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListFive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListFive.Designer.cs">
+      <DependentUpon>FListFive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListFour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListFour.Designer.cs">
+      <DependentUpon>FListFour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListIdentitasPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListIdentitasPasien.Designer.cs">
+      <DependentUpon>FListIdentitasPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFListOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFListOne.Designer.cs">
+      <DependentUpon>TFListOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFListRegistrasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFListRegistrasi.Designer.cs">
+      <DependentUpon>TFListRegistrasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListRegistrasiPenunjang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListRegistrasiPenunjang.Designer.cs">
+      <DependentUpon>FListRegistrasiPenunjang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListThree.Designer.cs">
+      <DependentUpon>FListThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListThreeRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListThreeRM.Designer.cs">
+      <DependentUpon>FListThreeRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FListTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FListTwo.Designer.cs">
+      <DependentUpon>FListTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFLogin.Designer.cs">
+      <DependentUpon>TFLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFDialogExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFDialogExit.Designer.cs">
+      <DependentUpon>TFDialogExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFLogin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFLogin2.Designer.cs">
+      <DependentUpon>TFLogin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFLoginRuangRawat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFLoginRuangRawat.Designer.cs">
+      <DependentUpon>TFLoginRuangRawat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFMainMenu.Designer.cs">
+      <DependentUpon>TFMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FPengobatanPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FPengobatanPasien.Designer.cs">
+      <DependentUpon>FPengobatanPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FPeriksaFisik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FPeriksaFisik.Designer.cs">
+      <DependentUpon>FPeriksaFisik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FResumeAnamnesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FResumeAnamnesa.Designer.cs">
+      <DependentUpon>FResumeAnamnesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FAddTarifPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FAddTarifPasien.Designer.cs">
+      <DependentUpon>FAddTarifPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FRptPenngunjung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FRptPenngunjung.Designer.cs">
+      <DependentUpon>FRptPenngunjung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FRptTopTenPenyakit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FRptTopTenPenyakit.Designer.cs">
+      <DependentUpon>FRptTopTenPenyakit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\FTindakanPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\FTindakanPasien.Designer.cs">
+      <DependentUpon>FTindakanPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Kasir\FBayar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Kasir\FBayar.Designer.cs">
+      <DependentUpon>FBayar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Kasir\FListRegistrasiKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Kasir\FListRegistrasiKasir.Designer.cs">
+      <DependentUpon>FListRegistrasiKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Kasir\FRincianTindakanKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Kasir\FRincianTindakanKasir.Designer.cs">
+      <DependentUpon>FRincianTindakanKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Poli\FRujukantarpoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Poli\FRujukantarpoli.Designer.cs">
+      <DependentUpon>FRujukantarpoli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Registrasi\FListReportFilterByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Registrasi\FListReportFilterByDate.Designer.cs">
+      <DependentUpon>FListReportFilterByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Registrasi\FMainMenuRegistrasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Registrasi\FUpdateNoRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Registrasi\FUpdateNoRM.Designer.cs">
+      <DependentUpon>FUpdateNoRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\RekamMedis\TFListReportFilterByPelayananmedisAndDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\RekamMedis\TFListReportFilterByPelayananmedisAndDate.Designer.cs">
+      <DependentUpon>TFListReportFilterByPelayananmedisAndDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\SIE\FMainMenuSIE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\FPendapatanByYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\FPendapatanByYear.Designer.cs">
+      <DependentUpon>FPendapatanByYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\FPendapatanByYearAndMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\FPendapatanByYearAndMonth.Designer.cs">
+      <DependentUpon>FPendapatanByYearAndMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\FPendapatanByYearAndMonthRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\FPendapatanByYearAndMonthRange.Designer.cs">
+      <DependentUpon>FPendapatanByYearAndMonthRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\FPendapatanByYearRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\SIE\Pendapatan\FPendapatanByYearRange.Designer.cs">
+      <DependentUpon>FPendapatanByYearRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\Tarif\FAddEditTarif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\Tarif\FAddEditTarif.Designer.cs">
+      <DependentUpon>FAddEditTarif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFToolTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFToolTip.Designer.cs">
+      <DependentUpon>TFToolTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\frm\TFWalpaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template\frm\TFWalpaper.Designer.cs">
+      <DependentUpon>TFWalpaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Report\Kasir\RincianTransaksiPasienRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\Report\Kasir\RincianTransaksiPasienRpt.Designer.cs">
+      <DependentUpon>RincianTransaksiPasienRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Report\Registrasi\KartuStatusReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\Report\Registrasi\KartuStatusReport1.Designer.cs">
+      <DependentUpon>KartuStatusReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Report\Registrasi\RegisterReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\Report\Registrasi\RegisterReport1.Designer.cs">
+      <DependentUpon>RegisterReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Report\RekamMedis\PengunjungReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template\Report\RekamMedis\PengunjungReport.Designer.cs">
+      <DependentUpon>PengunjungReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template\uc\ucIndikatorKlikMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Template\uc\ucIndikatorKlikMenu.Designer.cs">
+      <DependentUpon>ucIndikatorKlikMenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrontEnd\Gizi\FHomeGizi.resx">
+      <DependentUpon>FHomeGizi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\IGD\FHomeIGD.resx">
+      <DependentUpon>FHomeIGD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Kasir\FTransaksiKasir.resx">
+      <DependentUpon>FTransaksiKasir.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\LAB\FHomeLAB.resx">
+      <DependentUpon>FHomeLAB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\LAB\FListRegistrasiLAB.resx">
+      <DependentUpon>FListRegistrasiLAB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\POLI\FHomePoli.resx">
+      <DependentUpon>FHomePoli.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\POLI\ListRegistrasiPoli.resx">
+      <DependentUpon>ListRegistrasiPoli.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RAD\FHomeRAD.resx">
+      <DependentUpon>FHomeRAD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RawatInap\FHomeRI.resx">
+      <DependentUpon>FHomeRI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RegistrasiRI\FHomeRegistrasiRI.resx">
+      <DependentUpon>FHomeRegistrasiRI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RegistrasiRI\FKonfirmasiRegistrasiRI.resx">
+      <DependentUpon>FKonfirmasiRegistrasiRI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RegistrasiRI\FListAsalRegistrasi.resx">
+      <DependentUpon>FListAsalRegistrasi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RegistrasiRJ\FAddEditRegistrasiPasienBaruRJ.resx">
+      <DependentUpon>FAddEditRegistrasiPasienBaruRJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RegistrasiRJ\FHomeRegistrasiRJ.resx">
+      <DependentUpon>FHomeRegistrasiRJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RegistrasiRJ\FListIdentitasPasienRJ.resx">
+      <DependentUpon>FListIdentitasPasienRJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RegistrasiRJ\FListRegistrasiRJ.resx">
+      <DependentUpon>FListRegistrasiRJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RegistrasiRJ\FLoginRegistrasiRJ.resx">
+      <DependentUpon>FLoginRegistrasiRJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RekamMedis\FListDetailPasienRM.resx">
+      <DependentUpon>FListDetailPasienRM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RekamMedis\FListDetailTransaksiPasien.resx">
+      <DependentUpon>FListDetailTransaksiPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RekamMedis\FListPasienRM.resx">
+      <DependentUpon>FListPasienRM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\RekamMedis\FListRegistrasiByPasien.resx">
+      <DependentUpon>FListRegistrasiByPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Template\frm\FAddTarifPasien2.resx">
+      <DependentUpon>FAddTarifPasien2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FAnamnesaPasien.resx">
+      <DependentUpon>FAnamnesaPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Depo\FAddEditDepo.resx">
+      <DependentUpon>FAddEditDepo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\FAddEditHargajual.resx">
+      <DependentUpon>FAddEditHargajual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\TFAddEditBarangGudang.resx">
+      <DependentUpon>TFAddEditBarangGudang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\TFAddEditBarangKeluar.resx">
+      <DependentUpon>TFAddEditBarangKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\TFAddEditStockOP.resx">
+      <DependentUpon>TFAddEditStockOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\TFListBarangGudang2.resx">
+      <DependentUpon>TFListBarangGudang2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\TFAddBarangMasukGudang.resx">
+      <DependentUpon>TFAddBarangMasukGudang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\TFEditTarifGudang.resx">
+      <DependentUpon>TFEditTarifGudang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\TFListBarangKeluar.resx">
+      <DependentUpon>TFListBarangKeluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\TFLIstStockOP.resx">
+      <DependentUpon>TFLIstStockOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Pembelian\TFAddEditPembelian.resx">
+      <DependentUpon>TFAddEditPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\FDetailPembelian.resx">
+      <DependentUpon>FDetailPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\FFilterPembelian.resx">
+      <DependentUpon>FFilterPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\FAddBarangGudang.resx">
+      <DependentUpon>FAddBarangGudang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Gudang\FListBarangGudang.resx">
+      <DependentUpon>FListBarangGudang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\FListPembelian.resx">
+      <DependentUpon>FListPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Pembelian\TFListPembelian2.resx">
+      <DependentUpon>TFListPembelian2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\ObatSatuan\TFAddEditObatSatuan.resx">
+      <DependentUpon>TFAddEditObatSatuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Obat\TFAddEditObat.resx">
+      <DependentUpon>TFAddEditObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\Pembelian\TFListPembelianDetail.resx">
+      <DependentUpon>TFListPembelianDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\SIE\Pendapatan\TFPendapatanByPelayananMedik.resx">
+      <DependentUpon>TFPendapatanByPelayananMedik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\SIE\Pendapatan\TFPendapatanByRuangPelayanan.resx">
+      <DependentUpon>TFPendapatanByRuangPelayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\SIE\TFDashboardSIE.resx">
+      <DependentUpon>TFDashboardSIE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFListOneFilter.resx">
+      <DependentUpon>TFListOneFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Farmasi\TFMainMenuFarmasi.resx">
+      <DependentUpon>TFMainMenuFarmasi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FCaraPulang.resx">
+      <DependentUpon>FCaraPulang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FKonfirmasiRegistrasiPenunjang.resx">
+      <DependentUpon>FKonfirmasiRegistrasiPenunjang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FPelayananPasien.resx">
+      <DependentUpon>FPelayananPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FRptBukuRegister.resx">
+      <DependentUpon>FRptBukuRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListRiwayatPenyakitPasien.resx">
+      <DependentUpon>FListRiwayatPenyakitPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListSeven.resx">
+      <DependentUpon>FListSeven.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FDiagnosaPasien.resx">
+      <DependentUpon>FDiagnosaPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListSix.resx">
+      <DependentUpon>FListSix.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFAddEditRegistrasiPasien.resx">
+      <DependentUpon>TFAddEditRegistrasiPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFHome.resx">
+      <DependentUpon>TFHome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FKonfirmasiRegistrasi.resx">
+      <DependentUpon>FKonfirmasiRegistrasi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListBed.resx">
+      <DependentUpon>FListBed.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListFive.resx">
+      <DependentUpon>FListFive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListFour.resx">
+      <DependentUpon>FListFour.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListIdentitasPasien.resx">
+      <DependentUpon>FListIdentitasPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFListOne.resx">
+      <DependentUpon>TFListOne.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFListRegistrasi.resx">
+      <DependentUpon>TFListRegistrasi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListRegistrasiPenunjang.resx">
+      <DependentUpon>FListRegistrasiPenunjang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListThree.resx">
+      <DependentUpon>FListThree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListThreeRM.resx">
+      <DependentUpon>FListThreeRM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FListTwo.resx">
+      <DependentUpon>FListTwo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFLogin.resx">
+      <DependentUpon>TFLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFDialogExit.resx">
+      <DependentUpon>TFDialogExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFLogin2.resx">
+      <DependentUpon>TFLogin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFLoginRuangRawat.resx">
+      <DependentUpon>TFLoginRuangRawat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFMainMenu.resx">
+      <DependentUpon>TFMainMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FPengobatanPasien.resx">
+      <DependentUpon>FPengobatanPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FPeriksaFisik.resx">
+      <DependentUpon>FPeriksaFisik.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FResumeAnamnesa.resx">
+      <DependentUpon>FResumeAnamnesa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FAddTarifPasien.resx">
+      <DependentUpon>FAddTarifPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FRptPenngunjung.resx">
+      <DependentUpon>FRptPenngunjung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FRptTopTenPenyakit.resx">
+      <DependentUpon>FRptTopTenPenyakit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\FTindakanPasien.resx">
+      <DependentUpon>FTindakanPasien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Kasir\FBayar.resx">
+      <DependentUpon>FBayar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Kasir\FListRegistrasiKasir.resx">
+      <DependentUpon>FListRegistrasiKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Kasir\FRincianTindakanKasir.resx">
+      <DependentUpon>FRincianTindakanKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Poli\FRujukantarpoli.resx">
+      <DependentUpon>FRujukantarpoli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Registrasi\FListReportFilterByDate.resx">
+      <DependentUpon>FListReportFilterByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Registrasi\FMainMenuRegistrasi.resx">
+      <DependentUpon>FMainMenuRegistrasi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Registrasi\FUpdateNoRM.resx">
+      <DependentUpon>FUpdateNoRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\RekamMedis\TFListReportFilterByPelayananmedisAndDate.resx">
+      <DependentUpon>TFListReportFilterByPelayananmedisAndDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\SIE\FMainMenuSIE.resx">
+      <DependentUpon>FMainMenuSIE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\SIE\Pendapatan\FPendapatanByYear.resx">
+      <DependentUpon>FPendapatanByYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\SIE\Pendapatan\FPendapatanByYearAndMonth.resx">
+      <DependentUpon>FPendapatanByYearAndMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\SIE\Pendapatan\FPendapatanByYearAndMonthRange.resx">
+      <DependentUpon>FPendapatanByYearAndMonthRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\SIE\Pendapatan\FPendapatanByYearRange.resx">
+      <DependentUpon>FPendapatanByYearRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\Tarif\FAddEditTarif.resx">
+      <DependentUpon>FAddEditTarif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFToolTip.resx">
+      <DependentUpon>TFToolTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\frm\TFWalpaper.resx">
+      <DependentUpon>TFWalpaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Report\Kasir\RincianTransaksiPasienRpt.resx">
+      <DependentUpon>RincianTransaksiPasienRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Report\Registrasi\KartuStatusReport1.resx">
+      <DependentUpon>KartuStatusReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Report\Registrasi\RegisterReport1.resx">
+      <DependentUpon>RegisterReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\Report\RekamMedis\PengunjungReport.resx">
+      <DependentUpon>PengunjungReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template\uc\ucIndikatorKlikMenu.resx">
+      <DependentUpon>ucIndikatorKlikMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\SIMRS.Model.aptbarangsatuan.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.aptbrggu.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.aptdepo.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.aptpbf.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.aptsatuan.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.customobject.rekammedis.copengunjung.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.pemeriksaanfisik.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.ruangrawat.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.tempview.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_anamnesapasien.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptbarangmasukdetail_aptbrggudetail.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptbarangmasuk_pbf_aptbrggu.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptbarangsatuan_pbf.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptbrggudetail.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptbrggudetail_notin_stock.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptdistribusi.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptdistribusidetail.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptgudang.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptgudangdetail.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptpembelian.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptpembeliandetail.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptstockkontrol.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptstockopgudang.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_aptstockopgudangdetail.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_icdxpasienpoli.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_pelayananpasien_distinct_from_not_alamat.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_pelayananpasien_ruangperawatan_from_not_alamat.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_pemeriksaanfisik.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_pengobatan.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_registrasiruangrawat.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_registrasi_transaksi.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_statuspenyakit.datasource" />
+    <None Include="Properties\DataSources\SIMRS.Model.view.v_tarif_withaout_jenistarif_penjaminid.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SIMRS.DESKTOP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIMRS.DA\SIMRS.DA.csproj">
+      <Project>{1ea5df15-f668-45a1-bd70-4a5205fd9a7f}</Project>
+      <Name>SIMRS.DA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIMRS.Model\SIMRS.Model.csproj">
+      <Project>{7b26ae35-8207-4abf-8a52-a2d889c3e541}</Project>
+      <Name>SIMRS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIMRS.Services\SIMRS.Services.csproj">
+      <Project>{d70b31de-8c2c-4770-886c-9b982f6c7169}</Project>
+      <Name>SIMRS.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinasKes3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-to-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-down-button-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20170315-WA0001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kabupaten Konawe Utara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kabupaten Konawe Utara1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="branding.ico" />
+    <None Include="Dash\pendapatan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Dash\pendapatan-ruang-pelayanan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Dash\pendapatan2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="far3_32.ico" />
+    <None Include="Resources\sie02.jpg" />
+    <None Include="Resources\sie01.jpg" />
+    <None Include="Resources\02.jpg" />
+    <None Include="Resources\01.jpg" />
+    <Content Include="Resources\DinasKes31.png" />
+    <Content Include="Resources\dinkes31.jpg" />
+    <None Include="Resources\far1.jpg" />
+    <None Include="Resources\far2.png" />
+    <None Include="Resources\far3.jpg" />
+    <None Include="Resources\icons8-circle-8.png" />
+    <None Include="Resources\icons8-circle-9.png" />
+    <None Include="Resources\icons8-circle-10.png" />
+    <Content Include="Resources\IMG-20170315-WA00011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FrontEnd\SIE\Home\" />
+    <Folder Include="Template\frm\SIE\Indikator\" />
+    <Folder Include="Template\frm\SIE\Kunjungan\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

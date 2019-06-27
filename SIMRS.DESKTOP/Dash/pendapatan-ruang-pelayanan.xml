@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-ID">
+  <Title Text="Pendapatan By Pelayanan Medik - Ruang Pelayanan" />
+  <DataSources>
+    <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
+      <Connection Name="cn" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="sp_bi_pendapatan">
+        <Parameter Name="startDate" Type="DevExpress.DataAccess.Expression">(System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?yearParam + '/01/01')</Parameter>
+        <Parameter Name="endDate" Type="DevExpress.DataAccess.Expression">(System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)(?yearParam + '/12/31')</Parameter>
+        <Tables>
+          <Table Name="v_bi_pendapatan" X="30" Y="30" Width="125" Height="193" />
+        </Tables>
+        <Columns>
+          <Column Table="v_bi_pendapatan" Name="nocm" />
+          <Column Table="v_bi_pendapatan" Name="ruangrawatid" />
+          <Column Table="v_bi_pendapatan" Name="ruangrawatnm" />
+          <Column Table="v_bi_pendapatan" Name="pelayananmedikid" />
+          <Column Table="v_bi_pendapatan" Name="pelayananmediknm" />
+          <Column Table="v_bi_pendapatan" Name="strukpelayanantgl" />
+          <Column Table="v_bi_pendapatan" Name="grandtotalbiaya" />
+        </Columns>
+        <Sorting>
+          <Column Table="v_bi_pendapatan" Name="pelayananmedikid" />
+          <Column Table="v_bi_pendapatan" Name="strukpelayanantgl" />
+        </Sorting>
+        <Filter>[v_bi_pendapatan.strukpelayanantgl] Between(?startDate, ?endDate)</Filter>
+        <GroupFilter></GroupFilter>
+      </Query>
+      <Query Type="SelectQuery" Name="v_bi_pendapatan">
+        <Tables>
+          <Table Name="v_bi_pendapatan" X="30" Y="30" Width="125" Height="204" />
+        </Tables>
+        <Columns>
+          <Expression Alias="Tahun">GETYEAR([v_bi_pendapatan.strukpelayanantgl])</Expression>
+        </Columns>
+        <Grouping>
+          <Expression>GETYEAR([v_bi_pendapatan.strukpelayanantgl])</Expression>
+        </Grouping>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="sp_bi_pendapatan">
+            <Field Name="nocm" Type="String" />
+            <Field Name="ruangrawatid" Type="Int16" />
+            <Field Name="ruangrawatnm" Type="String" />
+            <Field Name="pelayananmedikid" Type="Int16" />
+            <Field Name="pelayananmediknm" Type="String" />
+            <Field Name="strukpelayanantgl" Type="DateTime" />
+            <Field Name="grandtotalbiaya" Type="Decimal" />
+          </View>
+          <View Name="v_bi_pendapatan">
+            <Field Name="Tahun" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="yearParam" Value="2018" Description="Input tahun:">
+      <DynamicListLookUpSettings DataSourceName="dashboardSqlDataSource1" DataMember="v_bi_pendapatan" ValueMember="Tahun" DisplayMember="Tahun" />
+    </Parameter>
+  </Parameters>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="" ParentContainer="dashboardItemGroup1" DataSource="dashboardSqlDataSource1" DataMember="sp_bi_pendapatan">
+      <DataItems>
+        <Dimension DataMember="strukpelayanantgl" DateTimeGroupInterval="Month" ColoringMode="Hue" DefaultId="DataItem2">
+          <DateTimeFormat MonthFormat="Abbreviated" />
+        </Dimension>
+        <Measure DataMember="grandtotalbiaya" Name="Total" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="pelayananmediknm" DefaultId="DataItem1" />
+        <Dimension DataMember="ruangrawatnm" DefaultId="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+        <SeriesDimension DefaultId="DataItem3" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple IgnoreEmptyPoints="true" ShowPointMarkers="true">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions OverlappingMode="Reposition" Position="Inside" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="" ShowCaption="false" ParentContainer="dashboardItemGroup1" DataSource="dashboardSqlDataSource1" DataMember="sp_bi_pendapatan" FilterType="Exact">
+      <DataItems>
+        <Dimension DataMember="strukpelayanantgl" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+      <DateTimePeriods>
+        <DateTimePeriod Name="this year">
+          <StartLimit>
+            <FlowDateTimePeriodLimit />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Offset="1" />
+          </EndLimit>
+        </DateTimePeriod>
+      </DateTimePeriods>
+    </DateFilter>
+    <TreeView ComponentName="treeViewDashboardItem1" Name="Tree View 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="sp_bi_pendapatan">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="pelayananmediknm" DefaultId="DataItem0" />
+        <Dimension DataMember="ruangrawatnm" DefaultId="DataItem1" />
+        <Dimension DataMember="strukpelayanantgl" DefaultId="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem2" />
+      </HiddenDimensions>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+        <Dimension DefaultId="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <Pivot ComponentName="pivotDashboardItem1" Name="" ParentContainer="dashboardItemGroup1" DataSource="dashboardSqlDataSource1" DataMember="sp_bi_pendapatan">
+      <DataItems>
+        <Measure DataMember="grandtotalbiaya" Name="Total" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="strukpelayanantgl" DefaultId="DataItem1" />
+        <Dimension DataMember="strukpelayanantgl" DateTimeGroupInterval="Month" DefaultId="DataItem2" />
+        <Dimension DataMember="pelayananmediknm" DefaultId="DataItem3" />
+        <Dimension DataMember="ruangrawatnm" DefaultId="DataItem4" />
+      </DataItems>
+      <Columns>
+        <Column DefaultId="DataItem1" />
+        <Column DefaultId="DataItem2" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem3" />
+        <Row DefaultId="DataItem4" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+      <AutoExpandColumnGroups>true</AutoExpandColumnGroups>
+      <ShowColumnGrandTotals>false</ShowColumnGrandTotals>
+      <ShowRowGrandTotals>false</ShowRowGrandTotals>
+    </Pivot>
+  </Items>
+  <Groups>
+    <Group ComponentName="dashboardItemGroup1" Name="Group 1" ShowCaption="false">
+      <InteractivityOptions IgnoreMasterFilters="false" IsMasterFilter="true" />
+    </Group>
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutItem DashboardItem="treeViewDashboardItem1" Weight="13.51636747624076" />
+      <LayoutGroup Orientation="Vertical" DashboardItem="dashboardItemGroup1" Weight="86.48363252375924">
+        <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="12.86031042128603" />
+        <LayoutItem DashboardItem="pivotDashboardItem1" Weight="43.68070953436807" />
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="43.4589800443459" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
